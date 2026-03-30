@@ -17,7 +17,7 @@ The tool accepts a file path as a command-line argument and performs the followi
 
 ## Compilation and Usage
 
-**Requirements:** Linux x86-64 system, `nasm` assembler, and `ld` linker.
+Requirements: Linux x86-64 system, `nasm` assembler, and `ld` linker.
 
 ### Compilation
 To compile the assembly source code into an executable binary:
