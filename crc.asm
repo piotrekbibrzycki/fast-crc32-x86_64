@@ -9,6 +9,7 @@ section .data
 
 section .bss 
     fd resq 1
+    buffer resb 4096
 
 section .text
 _start:
@@ -31,6 +32,24 @@ _start:
     mov [fd], rax
 
 
+.read_loop:
+    mov rax, 0
+    mov rdi, [fd]
+    mov rsi, buffer 
+    mov rdx, 4096 
+    syscall 
+
+    cmp rax, 0
+    je .close_file 
+    jl .show_open_error
+
+    jmp .read_loop 
+
+
+.close_file:
+    jmp.exit_ok
+
+    
 .exit_ok:
     mov rax, 60
     xor rdi, rdi 
