@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" viewBox="0 0 680 400">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --fg2: #6b6b6b;
+    --fg3: #999999;
+    --line: #cccccc;
+    --box-bg: #fafafa;
+    --box-stroke: #d4d4d4;
+  }
+  text { font-family: "SF Mono", "Cascadia Code", "Fira Code", Consolas, monospace; }
+  rect { fill: var(--box-bg); stroke: var(--box-stroke); stroke-width: 0.7; rx: 3; }
+  line { stroke: var(--line); stroke-width: 0.8; }
+</style>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+    <path d="M2 2L8 5L2 8" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<rect width="680" height="400" fill="var(--bg)"/>
+
+<text x="340" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="var(--fg)">data processing &amp; memory usage</text>
+
+<rect x="284" y="60" width="112" height="34" rx="3"/>
+<text x="340" y="80" text-anchor="middle" dominant-baseline="central" font-size="10.5" fill="var(--fg)">file on disk</text>
+
+<line x1="340" y1="94" x2="340" y2="120" marker-end="url(#a)"/>
+<text x="346" y="110" font-size="8.5" fill="var(--fg2)">sys_read</text>
+
+<rect x="240" y="122" width="200" height="60" rx="3"/>
+<text x="340" y="142" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="500" fill="var(--fg)">4 KB memory buffer</text>
+<text x="340" y="160" text-anchor="middle" dominant-baseline="central" font-size="9.5" fill="var(--fg3)">(fixed size in .bss)</text>
+
+<line x1="340" y1="182" x2="340" y2="210" marker-end="url(#a)"/>
+<text x="346" y="200" font-size="8.5" fill="var(--fg2)">process chunk</text>
+
+<rect x="200" y="212" width="280" height="70" rx="3"/>
+<text x="340" y="235" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="500" fill="var(--fg)">CRC-32 calculation engine</text>
+<text x="340" y="253" text-anchor="middle" dominant-baseline="central" font-size="9.5" fill="var(--fg3)">XOR · shifts · poly: 0xEDB88320</text>
+<text x="340" y="268" text-anchor="middle" dominant-baseline="central" font-size="9.5" fill="var(--fg3)">(processing loop)</text>
+
+<path d="M 480 247 L 520 247 L 520 152 L 440 152" fill="none" stroke="var(--line)" stroke-width="0.8" marker-end="url(#a)"/>
+<text x="526" y="195" font-size="8.5" fill="var(--fg2)">next chunk</text>
+
+<line x1="340" y1="282" x2="340" y2="310" marker-end="url(#a)"/>
+<text x="346" y="300" font-size="8.5" fill="var(--fg2)">final result</text>
+
+<rect x="230" y="312" width="220" height="48" rx="3"/>
+<text x="340" y="331" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="500" fill="var(--fg)">hex formatter (bin -> ascii)</text>
+<text x="340" y="348" text-anchor="middle" dominant-baseline="central" font-size="9.5" fill="var(--fg3)">output: 8-char hex string</text>
+
+<line x1="340" y1="360" x2="340" y2="380" marker-end="url(#a)"/>
+
+</svg>
