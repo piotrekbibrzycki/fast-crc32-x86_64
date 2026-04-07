@@ -1,4 +1,4 @@
-# CRC-32 calculator in x86-64 assembly
+### CRC-32 calculator in x86-64 assembly
 
 A CRC-32 checksum calculator written in pure x86-64 assembly (NASM) for Linux. This program interacts directly with the Linux kernel via system calls.
 
