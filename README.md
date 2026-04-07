@@ -15,6 +15,8 @@ The tool accepts a file path as a command-line argument and performs the followi
 4. Converts the final 32-bit binary result into an 8-character hexadecimal ASCII string.
 5. Closes the file and prints the formatted result to standard output (`stdout`).
 
+![dataprocessing](docs/data-processing.svg)
+
 ## compilation and usage
 
 Requirements: Linux x86-64 system, `nasm` assembler, and `ld` linker.
