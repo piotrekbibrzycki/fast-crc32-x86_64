@@ -1,13 +1,13 @@
-# CRC-32 Calculator in x86-64 Assembly
+# CRC-32 calculator in x86-64 assembly
 
-A standalone CRC-32 checksum calculator written in pure x86-64 assembly (NASM) for Linux. This program interacts directly with the Linux kernel via system calls.
+A CRC-32 checksum calculator written in pure x86-64 assembly (NASM) for Linux. This program interacts directly with the Linux kernel via system calls.
 
-## What is CRC?
+## what is CRC?
 Cyclic Redundancy Check (CRC) is an error-detecting code commonly used in digital networks and storage devices to detect accidental changes to raw data. It acts as a digital fingerprint for files. Changing even a single bit in a file will result in a completely different CRC checksum. 
 
 For more mathematical background, visit [Wikipedia](https://en.wikipedia.org/wiki/Cyclic_redundancy_check)
 
-## How the Program Works
+## how the program works
 The tool accepts a file path as a command-line argument and performs the following operations:
 1. Safely opens the file in read-only mode.
 2. Reads data in 4 KB chunks into a memory buffer, ensuring efficient handling of files of any size without exhausting system memory.
@@ -15,11 +15,11 @@ The tool accepts a file path as a command-line argument and performs the followi
 4. Converts the final 32-bit binary result into an 8-character hexadecimal ASCII string.
 5. Closes the file and prints the formatted result to standard output (`stdout`).
 
-## Compilation and Usage
+## compilation and usage
 
 Requirements: Linux x86-64 system, `nasm` assembler, and `ld` linker.
 
-### Compilation
+## compilation
 To compile the assembly source code into an executable binary:
 ```bash
 nasm -f elf64 crc.asm -o crc.o
