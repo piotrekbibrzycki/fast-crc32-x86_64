@@ -25,4 +25,7 @@ Requirements: Linux x86-64 system, `nasm` assembler, and `ld` linker.
 To compile the assembly source code into an executable binary:
 ```bash
 nasm -f elf64 crc.asm -o crc.o
+```
+```bash
 ld crc.o -o crc
+```
