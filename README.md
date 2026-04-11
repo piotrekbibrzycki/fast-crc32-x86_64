@@ -9,6 +9,8 @@ A CRC-32 checksum calculator written in pure x86-64 assembly (NASM) for Linux. T
 For more mathematical background, visit [Wikipedia](https://en.wikipedia.org/wiki/Cyclic_redundancy_check)
 
 ## how the program works
+![dataprocessing](docs/data-processing.svg)
+
 The tool accepts a file path as a command-line argument and performs the following operations:
 1. Safely opens the file in read-only mode.
 2. Reads data in 4 KB chunks into a memory buffer, ensuring efficient handling of files of any size without exhausting system memory.
@@ -16,7 +18,6 @@ The tool accepts a file path as a command-line argument and performs the followi
 4. Converts the final 32-bit binary result into an 8-character hexadecimal ASCII string.
 5. Closes the file and prints the formatted result to standard output (`stdout`).
 
-![dataprocessing](docs/data-processing.svg)
 
 ## compilation and usage
 
