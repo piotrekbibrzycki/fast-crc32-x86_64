@@ -4,7 +4,7 @@
 
 A CRC-32 checksum calculator written in pure x86-64 assembly (NASM) for Linux. This program interacts directly with the Linux kernel via system calls.
 
-`Cyclic Redundancy Check (CRC)` is an error-detecting code commonly used in digital networks and storage devices to detect accidental changes to raw data. It acts as a digital fingerprint for files. Changing even a single bit in a file will result in a completely different CRC checksum. 
+Cyclic Redundancy Check (CRC) is an error-detecting code commonly used in digital networks and storage devices to detect accidental changes to raw data. It acts as a digital fingerprint for files. Changing even a single bit in a file will result in a completely different CRC checksum. 
 
 For more mathematical background, visit [Wikipedia](https://en.wikipedia.org/wiki/Cyclic_redundancy_check)
 
